@@ -1,0 +1,82 @@
+﻿<Page x:Class="Students.Pages.Student"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Students.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" 
+      Title="Студенты">
+
+    <Grid Margin="1,0,-1,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Content="ФИО:" Margin="1,2,598,2" FontSize="14" Foreground="White"/>
+        <TextBox Grid.Row="0" x:Name="txtFIO" Margin="300,2,300,2" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="14"/>
+
+        <Label Grid.Column="0" Grid.Row="1" Content="Пол:" Margin="1,2,598,2" FontSize="14" Foreground="White"/>
+        <ComboBox Grid.Row="1" x:Name="cmbPol" Margin="300,1,300,3" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="14">
+            <ComboBoxItem Content="Мужской" />
+            <ComboBoxItem Content="Женский"/>
+        </ComboBox>
+
+        <Label Grid.Column="0" Grid.Row="2" Content="Дата рождения:" Margin="1,2,598,2" FontSize="14" Foreground="White"/>
+        <DatePicker Grid.Row="2" x:Name="dpDateOfBirth" Margin="300,0,300,4" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="14"/>
+
+        <Label Grid.Column="0" Grid.Row="3" Content="Родители:" Margin="1,2,598,2" FontSize="14" Foreground="White"/>
+        <TextBox Grid.Row="3" x:Name="txtRoditeli" Margin="300,1,300,3" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="14"/>
+
+        <Label Grid.Column="0" Grid.Row="4" Content="Адрес:" Margin="1,2,598,2" FontSize="14" Foreground="White"/>
+        <TextBox Grid.Row="4" x:Name="txtAdress" Margin="300,2,300,2" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="14"/>
+
+        <Label Grid.Column="0" Grid.Row="5" Content="Телефон:" Margin="1,2,598,2" FontSize="14" Foreground="White"/>
+        <TextBox Grid.Row="5" x:Name="txtNum" Margin="300,2,300,2" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="14"/>
+
+        <Label Grid.Column="0" Grid.Row="6" Content="Паспортные данные:" Margin="1,2,598,2" FontSize="14" Foreground="White"/>
+        <TextBox Grid.Row="6" x:Name="txtPassport" Margin="300,2,300,2" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="14"/>
+
+        <Label Grid.Column="0" Grid.Row="7" Content="Номер зачетки:" Margin="1,2,598,2" FontSize="14" Foreground="White"/>
+        <TextBox Grid.Row="7" x:Name="txtNumOfZach" Margin="301,2,299,2" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="14"/>
+
+        <Label Grid.Column="0" Grid.Row="8" Content="Дата поступления:"  Margin="1,2,598,2" FontSize="14" Foreground="White"/>
+        <DatePicker Grid.Row="8" x:Name="dpDate" Margin="299,2,301,2" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="14"/>
+
+        <Label Grid.Row="9" Grid.Column="0" Content="Группа:" Margin="0,0,597,0" FontSize="14" Foreground="White"/>
+        <TextBox Grid.Row="8" Width="200" x:Name="txtGroup" HorizontalAlignment="Center" Margin="0,28,0,2" Grid.RowSpan="2" Height="25" VerticalAlignment="Center" FontSize="14"/>
+
+        <Label Grid.Row="10" Grid.Column="0" Content="Курс:" Margin="0,0,597,0" FontSize="14" Foreground="White"/>
+        <TextBox Grid.Row="10" Width="200" x:Name="txtKours" HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" FontSize="14"/>
+
+        <Label Grid.Row="11" Grid.Column="0" Content="Код специальности:" Margin="0,0,597,0" FontSize="14" Foreground="White"/>
+        <ComboBox Grid.Row="11" Width="200" x:Name="cmbKodSpec" HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" FontSize="14"/>
+
+        <Label Grid.Row="12" Grid.Column="0" Content="Очная форма обучения:" Margin="0,5,597,0" FontSize="14" Foreground="White"/>
+        <Label Grid.Row="12" Content="Очная форма обучения:" Width="160" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="12" Width="15" x:Name="chkOchFormaObuch" HorizontalAlignment="Left" Margin="305,0,0,0" VerticalAlignment="Center" Height="15"/>
+
+        <Button x:Name="btnFirst" Grid.Row="13" Content="Первая" Margin="423,6,277,4" Click="btnFirst_Click" FontSize="16" Width="100" Background="#FF232323" Foreground="White"/>
+        <Button x:Name="btnPrevious" Grid.Row="13" Content="Предыдущая" Margin="570,5,130,5" Click="btnPrevious_Click" FontSize="16" Width="100" Background="#FF232323" Foreground="White"/>
+        <Button x:Name="btnAdd" Grid.Row="13" Content="Добавить" Margin="112,5,588,5" Click="btnAdd_Click" FontSize="16" Width="100" Background="#FF232323" Foreground="White"/>
+        <Button x:Name="btnNext" Grid.Row="13" Content="Следующая" Margin="683,5,17,5" Click="btnNext_Click" FontSize="16" Width="100" Background="#FF232323" Foreground="White"/>
+        <Button x:Name="btnDelete" Grid.Row="13" Content="Удалить" Margin="7,5,693,5" Click="btnDelete_Click" FontSize="16" Width="100" Background="#FF232323" Foreground="White"/>
+        <Button x:Name="btnSave" Grid.Row="13" Content="Сохранить" Margin="296,5,404,5" Click="btnSave_Click" FontSize="16" Width="100" Background="#FF232323" Foreground="White"/>
+    </Grid>
+</Page>
